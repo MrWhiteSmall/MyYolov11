@@ -1,0 +1,51 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: test onnx yolov11",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/root/lsj/yolo11/export_onnx/export_full_test.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--model",
+                "/root/lsj/yolo11/runs/detect/train109/weights/best.onnx",
+                "--img",
+                "/root/datasets/mvYOLO-Det-TP-Aug/images/train/T132C06A24CD00279_Up302-36-04_horizontal.jpg",
+                "--conf-thres",
+                "0.75",
+                "--iou-thres",
+                "0.5",
+            ]
+        },
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "tool for judge det",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "--predict_dir",
+                "runs/detect/predict2/labels",
+                "--target_label_dir",
+                "/root/datasets/mvYOLO-Det-TP-Aug/validate/labels",
+                "--ori_img_dir",
+                "/root/datasets/mvYOLO-Det-TP-Aug/validate/images",
+                "--save_img_dir",
+                "/root/datasets/mvYOLO-Det-TP-Aug/validate/val1",
+                "--conf",
+                "0.75",
+            ]
+        }
+    ]
+}

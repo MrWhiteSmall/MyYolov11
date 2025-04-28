@@ -1,0 +1,553 @@
+【版本更新日志】
+v1.0.3  解决Label偏移的现象，在xml2yolo的时候label-1导致
+v1.0.4  将脏污和划痕分开标注
+
+
+
+【2025-2-26】
+4480*2624
+Results saved to runs/detect/train112
+预测好的文件夹，文件为txt: runs/detect/predict3/labels
+目标label文件夹，文件为txt: /root/datasets/mvYOLO-Det-TP-Aug/validate/labels
+原来的图片文件夹: /root/datasets/mvYOLO-Det-TP-Aug/validate/images
+overkill或ignore后，文件存放的文件夹: /root/datasets/mvYOLO-Det-TP-Aug/validate/val1
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 38/38 [00:00<00:00, 6392.99it/s]
+********** 图片角度的过杀漏检： **********
+ok:38
+overkill:0
+ignore:0
+********************
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 38/38 [00:00<00:00, 1949.86it/s]
+********** instance box角度的过杀漏检： **********
+匹配的box数量: 1947
+总的的box数量: 4149
+匹配的box占总数比例: 46.93%
+********************
+
+3840size
+Validating runs/detect/train114/weights/best.pt...
+Ultralytics 8.3.8 🚀 Python-3.10.14 torch-2.0.1+cu117 CUDA:2 (NVIDIA A100-SXM4-40GB, 40339MiB)
+YOLO11n summary (fused): 238 layers, 2,584,297 parameters, 0 gradients, 6.3 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 11/11 [00:03<00:00,  3.29it/s]
+                   all         22       4149      0.604       0.64       0.63      0.257
+                     2         22       1964      0.671      0.625      0.675       0.27
+                     7          2        118      0.586      0.684      0.662      0.285
+                     8         22       2067      0.556       0.61      0.553      0.218
+Speed: 15.3ms preprocess, 15.4ms inference, 0.0ms loss, 1.0ms postprocess per image
+Results saved to runs/detect/train114
+
+【2025-2-28】
+Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 11/11 [00:03<00:00,  2.83it/s]
+all         22       4066      0.595      0.651      0.608      0.263
+    2         22       1964      0.689      0.704      0.736      0.327
+    7         22        811      0.511      0.736       0.56      0.235
+    8         22       1291      0.584      0.512      0.527      0.226
+Results saved to runs/detect/train115
+
+(yolov11) ❰root|yolo11❱ bash run_validate/tool_for_judge_det.sh
+预测好的文件夹，文件为txt: runs/detect/predict4/labels
+目标label文件夹，文件为txt: /root/datasets/mvYOLO-Det-TP-Aug/validate/labels
+原来的图片文件夹: /root/datasets/mvYOLO-Det-TP-Aug/validate/images
+overkill或ignore后，文件存放的文件夹: /root/datasets/mvYOLO-Det-TP-Aug/validate/val1
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 37/37 [00:00<00:00, 6596.22it/s]
+********** 图片角度的过杀漏检： **********
+ok:37
+overkill:0
+ignore:0
+********************
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 37/37 [00:00<00:00, 1580.24it/s]
+********** instance box角度的过杀漏检： **********
+匹配的box数量: 2928
+总的的box数量: 4066
+匹配的box占总数比例: 72.01%
+********************
+
+
+【2025-3-6】
+切片4096
+！！！RT-DETR 3200！！！
+Validating runs/train/exp8/weights/best.pt...
+Ultralytics 8.3.8 🚀 Python-3.10.14 torch-2.0.1+cu117 CUDA:1 (NVIDIA A100-SXM4-40GB, 40339MiB)
+rt-detr-l summary: 502 layers, 32,006,345 parameters, 0 gradients, 103.5 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 66/66 [00:14<00:00,  4.60
+                   all        132      14979       0.69      0.662       0.66      0.275
+                     2        132       6642      0.816      0.777      0.817      0.358
+                     7        120       3201      0.564      0.633      0.555       0.21
+                     8        132       5136       0.69      0.575      0.609      0.258
+Speed: 4.7ms preprocess, 79.3ms inference, 0.0ms loss, 0.4ms postprocess per image
+Results saved to runs/train/exp8
+<< conf=0.82 >>
+********** 图片角度的过杀漏检： **********
+ok:76
+overkill:0
+ignore:0
+********************
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 76/76 [00:00<00:00, 2505.07it/s]
+********** instance box角度的过杀漏检： **********
+匹配的box数量: 3794
+总的的box数量: 5115
+匹配的box占总数比例: 74.17%
+********************
+<< 训练时间 >>
+500 epochs completed in 9.297 hours.
+<< 预测时间 >>
+Speed: 67.5ms preprocess, 130.5ms inference, 0.5ms postprocess
+
+
+
+！！！YOLOv11 4096 ！！！
+Validating runs/detect/train117/weights/best.pt...
+Ultralytics 8.3.8 🚀 Python-3.10.14 torch-2.0.1+cu117 CUDA:3 (NVIDIA A100-SXM4-40GB, 40339MiB)
+YOLO11n summary (fused): 238 layers, 2,584,297 parameters, 0 gradients, 6.3 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 66/66 [00:09<00:00,  6.76it/s]
+                   all        132      14979      0.641      0.648      0.663      0.315
+                     2        132       6642      0.732      0.761      0.805      0.384
+                     7        120       3201      0.566      0.593      0.582      0.263
+                     8        132       5136      0.627      0.589      0.602        0.3
+Speed: 7.9ms preprocess, 39.8ms inference, 0.0ms loss, 2.1ms postprocess per image
+Results saved to runs/detect/train117
+<< conf=0.7 >>
+********** 图片角度的过杀漏检： **********
+ok:68
+overkill:7
+ignore:0
+********************
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 75/75 [00:00<00:00, 1979.10it/s]
+********** instance box角度的过杀漏检： **********
+匹配的box数量: 4441
+总的的box数量: 5115
+匹配的box占总数比例: 86.82%
+********************
+<< conf=0.81 >>
+********** 图片角度的过杀漏检： **********
+ok:75
+overkill:0
+ignore:0
+********************
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 75/75 [00:00<00:00, 2816.78it/s]
+********** instance box角度的过杀漏检： **********
+匹配的box数量: 3099
+总的的box数量: 5115
+匹配的box占总数比例: 60.59%
+********************
+<< 训练时间 >>
+500 epochs completed in 4.265 hours.
+<< 预测时间 >>
+Speed: 88.3ms preprocess, 47.6ms inference, 1.1ms postprocess
+
+
+【2025-3-13】
+!!!! FUMO-YOLOv11 !!!!!
+Validating runs/detect/train119/weights/best.pt...
+Ultralytics 8.3.8 🚀 Python-3.10.14 torch-2.0.1+cu117 CUDA:3 (NVIDIA A100-SXM4-40GB, 40339MiB)
+YOLO11n summary (fused): 238 layers, 2,584,297 parameters, 0 gradients, 6.3 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 45/45 [00:08<00:00,  5.13it/s]
+                   all         90       7569      0.682      0.821      0.785      0.455
+                     2         89       3978       0.73      0.931      0.923      0.625
+                     7         81       1540      0.592      0.931      0.867      0.548
+                     8         82       1960      0.664        0.8      0.798      0.518
+                     9          8         10      0.718        0.9      0.724      0.365
+                    10         30         81      0.705      0.543      0.613      0.219
+Speed: 11.7ms preprocess, 42.7ms inference, 0.0ms loss, 2.8ms postprocess per image
+Results saved to runs/detect/train119
+
+!!!! FUMO-RTDETR !!!!!
+Validating runs/train/exp9/weights/best.pt...
+Ultralytics 8.3.8 🚀 Python-3.10.14 torch-2.0.1+cu117 CUDA:1 (NVIDIA A100-SXM4-40GB, 40339MiB)
+rt-detr-l summary: 502 layers, 32,008,400 parameters, 0 gradients, 103.5 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 45/45 [00:08<00:00,  5.00it/s]
+                   all         90       7569      0.903      0.862      0.888      0.477
+                     2         89       3978      0.924      0.909      0.934      0.562
+                     7         81       1540      0.838      0.817       0.89      0.472
+                     8         82       1960      0.891      0.777      0.846       0.49
+                     9          8         10      0.984          1      0.995      0.573
+                    10         30         81      0.879      0.807      0.776      0.288
+Speed: 7.4ms preprocess, 75.5ms inference, 0.0ms loss, 0.5ms postprocess per image
+Results saved to runs/train/exp9
+
+【2025-3-14】
+!!!! SIMO-Light-YOLOv11 !!!!!
+Validating runs/detect/train120/weights/best.pt...
+Ultralytics 8.3.8 🚀 Python-3.10.14 torch-2.0.1+cu117 CUDA:3 (NVIDIA A100-SXM4-40GB, 40339MiB)
+YOLO11n summary (fused): 238 layers, 2,584,492 parameters, 0 gradients, 6.3 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 31/31 [00:05<00:00,  5.48it/s]
+                   all         62       2484      0.617      0.541      0.558      0.284
+                     0          4          6          1          0      0.233      0.162
+                     3         10         16      0.698       0.75      0.831      0.542
+                     4          4         38      0.475      0.684      0.454      0.181
+                     5          4         24      0.435      0.833      0.667      0.322
+                     7         56       1184       0.46      0.473      0.452      0.199
+                     8         54       1038      0.601      0.474      0.519      0.241
+                     9         18         70      0.627      0.614      0.701      0.354
+                    10         22        108      0.641      0.496       0.61      0.272
+Speed: 16.8ms preprocess, 57.2ms inference, 0.0ms loss, 1.3ms postprocess per image
+Results saved to runs/detect/train120
+
+!!!! SIMO-Light-RTDETR !!!!!
+Validating runs/train/exp10/weights/best.pt...
+Ultralytics 8.3.8 🚀 Python-3.10.14 torch-2.0.1+cu117 CUDA:2 (NVIDIA A100-SXM4-40GB, 40339MiB)
+rt-detr-l summary: 502 layers, 32,008,400 parameters, 0 gradients, 103.5 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 31/31 [00:05<00:00,  5.26it/s]
+                   all         62       2484      0.577      0.512      0.549      0.239
+                     0          4          6          0          0          0          0
+                     3         10         16      0.835      0.812      0.827      0.483
+                     4          4         38      0.505      0.368      0.407      0.145
+                     5          4         24      0.824      0.708      0.804      0.356
+                     7         56       1184      0.579      0.413      0.469      0.166
+                     8         54       1038       0.59      0.446      0.483       0.19
+                     9         18         70       0.67      0.671      0.717      0.321
+                    10         22        108      0.612      0.676      0.684      0.252
+Speed: 8.5ms preprocess, 75.0ms inference, 0.0ms loss, 0.3ms postprocess per image
+Results saved to runs/train/exp10
+
+【2025-3-17】
+!!!! SIMO-Light-YOLOv11 !!!!!
+Validating runs/detect/train121/weights/best.pt...
+Ultralytics 8.3.8 🚀 Python-3.10.14 torch-2.0.1+cu117 CUDA:3 (NVIDIA A100-SXM4-40GB, 40339MiB)
+YOLO11n summary (fused): 238 layers, 2,584,492 parameters, 0 gradients, 6.3 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 60/60 [00:09<00:00,  6.53it/s]
+                   all        120       4297      0.648      0.533      0.576      0.268
+                     0          3          5      0.646        0.2        0.2      0.029
+                     3         34         48       0.84      0.875      0.917      0.526
+                     4         16         96      0.505      0.427      0.418      0.173
+                     5         16         65      0.513      0.415      0.483       0.22
+                     7        109       1925      0.578      0.554      0.587      0.264
+                     8         97       1843       0.76      0.442      0.599      0.329
+                     9         23         71      0.607      0.697      0.675      0.304
+                    10         68        244      0.732      0.652      0.727      0.299
+Speed: 11.5ms preprocess, 52.9ms inference, 0.0ms loss, 2.0ms postprocess per image
+Results saved to runs/detect/train121
+
+!!!! SIMO-Light-RTDETR !!!!!
+Validating runs/train/exp11/weights/best.pt...
+Ultralytics 8.3.8 🚀 Python-3.10.14 torch-2.0.1+cu117 CUDA:2 (NVIDIA A100-SXM4-40GB, 40339MiB)
+rt-detr-l summary: 502 layers, 32,008,400 parameters, 0 gradients, 103.5 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 60/60 [00:10<00:00,  5.75it/s]
+                   all        120       4297      0.526       0.38      0.364       0.15
+                     0          3          5          1          0     0.0825     0.0165
+                     3         34         48      0.793      0.854      0.885      0.516
+                     4         16         96      0.348     0.0208     0.0472     0.0108
+                     5         16         65      0.195      0.354      0.207     0.0407
+                     7        109       1925      0.321       0.42      0.303     0.0989
+                     8         97       1843      0.571      0.162      0.232     0.0807
+                     9         23         71      0.585      0.606      0.632       0.24
+                    10         68        244      0.394      0.623      0.527      0.192
+Speed: 5.0ms preprocess, 72.6ms inference, 0.0ms loss, 0.3ms postprocess per image
+Results saved to runs/train/exp11
+
+小结：
+1 0号缺陷-凹凸点 学习不好
+2 3号 漏光  学习最好
+3 4，5 崩边崩角 学的一般，RT-DETR 对于边缘学的不好
+4 10号异物 > 9号毛屑 > 7 划伤、8 脏污  (混淆矩阵显示 7 8 容易被判断为背景！ 50%以上 )
+
+
+【2025-3-20】
+!!!! SIMO-Light-YOLOv11 !!!!!
+Validating runs/detect/train125/weights/best.pt...
+Ultralytics 8.3.8 🚀 Python-3.10.14 torch-2.0.1+cu117 CUDA:3 (NVIDIA A100-SXM4-40GB, 40339MiB)
+YOLO11n summary (fused): 238 layers, 2,647,891 parameters, 0 gradients, 6.6 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 58/58 [00:05<00:00, 10.02it/s]
+                   all        116       4557      0.637      0.599      0.644      0.351
+                     3         45         71      0.842      0.828      0.879      0.592
+                     4         14        109      0.524       0.55      0.545      0.228
+                     5         23         92      0.523      0.667      0.562      0.304
+                     7        104       2127      0.604      0.437      0.563      0.288
+                     9         12         41      0.656          1      0.951      0.599
+                    10         63        184      0.653       0.44      0.553       0.25
+                    81         15        127      0.576      0.331      0.449      0.186
+                    82         55       1163      0.698      0.549      0.639      0.379
+                    83         81        643      0.655      0.588      0.651      0.333
+Speed: 9.5ms preprocess, 27.5ms inference, 0.0ms loss, 1.2ms postprocess per image
+Results saved to runs/detect/train125
+
+小结：
+1  3，9学习很好
+2  4，5 一般 0.5
+3  7 划伤 一般 0.56
+4  10 异物  不好 <0.5
+5  81~83 一般  0.6
+
+【2025-3-21】
+!!!! SIMO-Light-YOLOv11 !!!!!
+Validating runs/detect/train137/weights/best.pt...
+Ultralytics 8.3.8 🚀 Python-3.10.14 torch-2.0.1+cu117 CUDA:2 (NVIDIA A100-SXM4-40GB, 40339MiB)
+YOLO11s summary (fused): 238 layers, 9,418,992 parameters, 0 gradients, 21.3 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 58/58 [00:07<00:00,  7.40it/s]
+                   all        116       5126      0.577      0.569      0.571      0.338
+                     3         52         77      0.809      0.896      0.871      0.596
+                     4         22        177      0.392       0.35      0.309      0.122
+                     5         33        123      0.398      0.293      0.296       0.15
+                     7        104       2239      0.556      0.565      0.585      0.298
+                     9          4          7      0.815          1      0.995      0.794
+                    10         66        195      0.642      0.497      0.544      0.263
+                    12         14        141      0.625      0.525      0.614      0.326
+                    13         63       1419      0.413      0.462      0.404      0.215
+                    14         81        748      0.538      0.531      0.523      0.275
+Speed: 10.0ms preprocess, 42.9ms inference, 0.0ms loss, 1.9ms postprocess per image
+Results saved to runs/detect/train137
+
+整理 FUMO confuse 的 数据
+
+SIMO-Light-train137尝试预测
+  Results saved to runs/detect/predict9
+  87 labels saved to runs/detect/predict9/labels
+  [[conf=0.8]]
+  ********** 图片角度的过杀漏检： **********
+  ok:79
+  overkill:0
+  ignore:8
+  ********** instance box角度的过杀漏检： **********
+  匹配的box数量: 526
+  总的的box数量: 3468
+  匹配的box占总数比例: 15.17%
+  [[conf=0.5]]
+  ********** 图片角度的过杀漏检： **********
+  ok:86
+  overkill:0
+  ignore:1
+  ********** instance box角度的过杀漏检： **********
+  匹配的box数量: 1823
+  总的的box数量: 3468
+  匹配的box占总数比例: 52.57%
+  ********************
+
+【2025-3-22】
+!!!! FUMO-YOLOv11 !!!!!
+Validating runs/detect/train138/weights/best.pt...
+Ultralytics 8.3.8 🚀 Python-3.10.14 torch-2.0.1+cu117 CUDA:3 (NVIDIA A100-SXM4-40GB, 40339MiB)
+YOLO11s summary (fused): 238 layers, 9,417,444 parameters, 0 gradients, 21.3 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 29/29 [00:08<00:00,  3.56it/s]
+                   all         58       6219      0.769      0.729      0.796      0.462
+                     2         58       3178      0.783      0.771       0.83      0.428
+                     7         53       1167      0.748      0.662      0.753      0.449
+                     8         58       1874      0.777      0.753      0.806      0.508
+时间：113ms
+Speed: 11.8ms preprocess, 101.1ms inference, 0.0ms loss, 2.1ms postprocess per image
+Results saved to runs/detect/train138
+
+后续处理
+1，以上22图slice 4096为baseline，不断加入后期数据进行学习
+2，尝试1024加入训练
+3，以后的加入都要把正样本放进去
+
+【2025-3-23】
+!!!! SIMO-YOLOv11 slice 1024 !!!!!
+Validating runs/detect/train141/weights/best.pt...
+Ultralytics 8.3.8 🚀 Python-3.10.14 torch-2.0.1+cu117 CUDA:2 (NVIDIA A100-SXM4-40GB, 40339MiB)
+YOLO11s summary (fused): 238 layers, 9,418,992 parameters, 0 gradients, 21.3 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 34/34 [00:01<00:00, 18.16it/s]
+                   all        268        591      0.847      0.708      0.807      0.591
+                     3         44         51      0.994      0.941      0.975      0.822
+                     4          7          8      0.888        0.5      0.609      0.486
+                     5          8          8      0.569      0.625      0.694       0.51
+                     7        102        130      0.834      0.638      0.772      0.529
+                     8         90        168      0.888       0.56      0.751      0.507
+                     9         11         16      0.821          1      0.988      0.784
+                    10        139        210      0.936      0.691      0.859      0.501
+Speed: 0.8ms preprocess, 2.8ms inference, 0.0ms loss, 0.6ms postprocess per image
+Results saved to runs/detect/train141
+
+激动人心了属实是。anchor free的方法能够获得不错的效果！
+
+预测一下(时间：10.8ms)
+Speed: 4.4ms preprocess, 5.8ms inference, 0.6ms postprocess per image at shape (1, 3, 1024, 1024)
+Results saved to runs/detect/predict10
+134 labels saved to runs/detect/predict10/labels
+
+SIMO-Light-Slice 1024 train141 尝试预测
+  [[conf=0.5]]
+  ********** 图片角度的过杀漏检： **********
+  ok:127
+  overkill:2
+  ignore:5
+  ********** instance box角度的过杀漏检： **********
+  匹配的box数量: 232
+  总的的box数量: 279
+  匹配的box占总数比例: 83.15%
+  ********************
+
+  验证文件【图片】目录: /root/datasets/mvTP-SIMO-Light-slice/validate/images
+  验证文件【label】目录，目录下txt文件: /root/datasets/mvTP-SIMO-Light-slice/validate/labels
+  预测label，目录下txt文件: runs/detect/predict10/labels
+  judge后文件存放位置: /root/datasets/mvTP-SIMO-Light-slice/validate
+  ignore      21
+  confuse     6
+  overkill    2
+
+看起来 效果不错
+导出一个版本先
+Export complete (3.8s)
+Results saved to /root/lsj/yolo11/runs/detect/train141/weights
+Predict:         yolo predict task=detect model=runs/detect/train141/weights/best.onnx imgsz=1024  
+Validate:        yolo val task=detect model=runs/detect/train141/weights/best.onnx imgsz=1024 data=/root/lsj/yolo11/run_det_light_slice.yaml  
+Visualize:       https://netron.app
+Model metadata properties: 
+{'description': 'Ultralytics YOLO11s model trained on /root/lsj/yolo11/run_det_light_slice.yaml', 'author': 
+'Ultralytics', 'date': '2025-03-23T16:42:39.219302', 
+'version': '1.0.0', 'license': 'AGPL-3.0 License (https://ultralytics.com/license)', 'docs': 'https://docs.ultralytics.com', 
+'stride': '32', 'task': 'detect', 'batch': '1', 'imgsz': '[1024, 1024]', 
+'names': "{0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '9', 10: '10', 
+11: '11', 12: '12', 13: '13', 14: '14', 15: '15'}", 
+'Company_name': 'dinnar', 
+'export_date': '2025-03-23-16-42-37'}
+IR version of the model: 7
+runs/detect/train141/weights/best.onnx
+
+【2025-3-30】
+!!!! FUMO-YOLOv11 slice 1024 !!!!!
+Validating runs/detect/train142/weights/best.pt...
+Ultralytics 8.3.8 🚀 Python-3.10.14 torch-2.0.1+cu117 CUDA:1 (NVIDIA A100-SXM4-40GB, 40339MiB)
+YOLO11s summary (fused): 238 layers, 9,417,444 parameters, 0 gradients, 21.3 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 6/6 [00:03<00:00,  1.64it/s]
+                   all        180       2238      0.865      0.821      0.873       0.61
+                     2        168       1812      0.973      0.945      0.973      0.773
+                     7        120        213      0.786       0.81      0.852      0.581
+                     8        122        213      0.838      0.709      0.795      0.476
+Speed: 2.6ms preprocess, 4.2ms inference, 0.0ms loss, 1.5ms postprocess per image
+Results saved to runs/detect/train142
+
+[[conf=0.1]] confuse 测试
+ignore      82
+confuse     18
+overkill    60
+
+[[conf=0.2]] 总的测试
+********** 图片角度的过杀漏检： **********
+ok:258
+overkill:60
+ignore:0
+********** instance box角度的过杀漏检： **********
+匹配的box数量: 1690
+总的的box数量: 1874
+匹配的box占总数比例: 90.18%
+********************
+
+【2025-3-31】
+!!!! FUMO-YOLOv11 slice 1024 !!!!!
+Validating runs/detect/train143/weights/best.pt...
+Ultralytics 8.3.8 🚀 Python-3.10.14 torch-2.0.1+cu117 CUDA:1 (NVIDIA A100-SXM4-40GB, 40339MiB)
+YOLO11s summary (fused): 238 layers, 9,417,444 parameters, 0 gradients, 21.3 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 6/6 [00:03<00:00,  1.71it/s]
+                   all        180       2128      0.921      0.817      0.895      0.668
+                     2        166       1692      0.976      0.969      0.987      0.822
+                     7        118        202      0.868      0.866      0.896       0.67
+                     8        126        234      0.918      0.615      0.804      0.512
+Speed: 3.4ms preprocess, 5.8ms inference, 0.0ms loss, 3.1ms postprocess per image
+Results saved to runs/detect/train143
+
+[[conf=0.2]] confuse 测试
+    验证文件【图片】目录: /root/datasets/mvTP-FUMO-mixed-Aug/validate/images
+    验证文件【label】目录，目录下txt文件: /root/datasets/mvTP-FUMO-mixed-Aug/validate/labels
+    预测label，目录下txt文件: runs/detect/predict12/labels
+    judge后文件存放位置: /root/datasets/mvTP-FUMO-mixed-Aug/validate
+    ignore      75
+    confuse     15
+    overkill    46
+
+[[conf=0.2]] 总的测试
+    ********** 图片角度的过杀漏检： **********
+    ok:260
+    overkill:46
+    ignore:0
+    ********************
+    ********** instance box角度的过杀漏检： **********
+    匹配的box数量: 1764
+    总的的box数量: 1877
+    匹配的box占总数比例: 93.98%
+    ********************
+
+    
+【2025-4-1】
+Validating runs/detect/train144/weights/best.pt...
+Ultralytics 8.3.8 🚀 Python-3.10.14 torch-2.0.1+cu117 CUDA:1 (NVIDIA A100-SXM4-40GB, 40339MiB)
+YOLO11s summary (fused): 238 layers, 9,417,444 parameters, 0 gradients, 21.3 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 6/6 [00:03<00:00,  1.88it/s]
+                   all        189       2234      0.874      0.836      0.885      0.658
+                     2        177       1767      0.976       0.97      0.989      0.823
+                     7        127        225      0.809      0.871        0.9      0.667
+                     8        134        242      0.839      0.666      0.766      0.483
+Speed: 2.5ms preprocess, 3.2ms inference, 0.0ms loss, 0.6ms postprocess per image
+Results saved to runs/detect/train144
+
+[[conf=0.2]] confuse 测试
+    验证文件【图片】目录: /root/datasets/mvTP-FUMO-mixed-Aug/validate/images
+    验证文件【label】目录，目录下txt文件: /root/datasets/mvTP-FUMO-mixed-Aug/validate/labels
+    预测label，目录下txt文件: runs/detect/predict13/labels
+    judge后文件存放位置: /root/datasets/mvTP-FUMO-mixed-Aug/validate
+    ignore      71
+    confuse     8
+    overkill    22
+
+[[conf=0.2]] 总的测试
+    ok:260
+    overkill:22
+    ignore:0
+    ********** instance box角度的过杀漏检： **********
+    匹配的box数量: 1755
+    总的的box数量: 1877
+    匹配的box占总数比例: 93.50%
+    ********************
+
+
+【2025-4-20】
+******************************************
+*  新增export ir_version 参数 不用后续导出再修改 *
+*  完成export engine 操作 *
+******************************************
+Ultralytics 8.3.8 🚀 Python-3.10.14 torch-2.0.1+cu117 CUDA:1 (NVIDIA A100-SXM4-40GB, 40339MiB)
+YOLO11s summary (fused): 238 layers, 9,417,444 parameters, 0 gradients, 21.3 GFLOPs
+metadata: {'description': 'Ultralytics YOLO11s model trained on /root/lsj/yolo11/run_det_slice.yaml', 'author': 'Ultralytics', 'date': '2025-04-02T13:41:06.756435', 'version': '1.0.0', 'license': 'AGPL-3.0 License (https://ultralytics.com/license)', 'docs': 'https://docs.ultralytics.com', 'stride': 32, 'task': 'detect', 'batch': 1, 'imgsz': [1024, 1024], 'names': {0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '9', 10: '10', 11: '11'}, 'Company_name': 'dinnar', 'export_date': '2025-04-02-13-41-02'}
+
+PyTorch: starting from 'runs/detect/train144/weights/best.pt' with input shape (1, 3, 1024, 1024) BCHW and output shape(s) (1, 21504, 17) (18.4 MB)
+********** model简化 **********
+
+ONNX: starting export with onnx 1.16.0 opset 12...
+============= Diagnostic Run torch.onnx.export version 2.0.1+cu117 =============
+verbose: False, log level: Level.ERROR
+======================= 0 NONE 0 NOTE 0 WARNING 0 ERROR ========================
+
+ONNX: slimming with onnxslim 0.1.34...
+ONNX: export success ✅ 1.9s, saved as 'runs/detect/train144/weights/best.onnx' (36.4 MB)
+
+TensorRT: starting export with TensorRT 8.6.1...
+[04/02/2025-13:41:08] [TRT] [I] [MemUsageChange] Init CUDA: CPU +3, GPU +0, now: CPU 2386, GPU 1102 (MiB)
+[04/02/2025-13:41:11] [TRT] [I] [MemUsageChange] Init builder kernel library: CPU +688, GPU +154, now: CPU 3128, GPU 1256 (MiB)
+[04/02/2025-13:41:11] [TRT] [I] ----------------------------------------------------------------
+[04/02/2025-13:41:11] [TRT] [I] Input filename:   runs/detect/train144/weights/best.onnx
+[04/02/2025-13:41:11] [TRT] [I] ONNX IR version:  0.0.7
+[04/02/2025-13:41:11] [TRT] [I] Opset version:    12
+[04/02/2025-13:41:11] [TRT] [I] Producer name:    pytorch
+[04/02/2025-13:41:11] [TRT] [I] Producer version: 2.0.1
+[04/02/2025-13:41:11] [TRT] [I] Domain:           
+[04/02/2025-13:41:11] [TRT] [I] Model version:    0
+[04/02/2025-13:41:11] [TRT] [I] Doc string:       
+[04/02/2025-13:41:11] [TRT] [I] ----------------------------------------------------------------
+[04/02/2025-13:41:11] [TRT] [W] onnx2trt_utils.cpp:377: Your ONNX model has been generated with INT64 weights, while TensorRT does not natively support INT64. Attempting to cast down to INT32.
+TensorRT: input "images" with shape(1, 3, 1024, 1024) DataType.FLOAT
+TensorRT: output "output0" with shape(1, 21504, 17) DataType.FLOAT
+TensorRT: building FP32 engine as runs/detect/train144/weights/best.engine
+[04/02/2025-13:41:23] [TRT] [I] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +32, now: CPU 3129, GPU 992 (MiB)
+[04/02/2025-13:41:23] [TRT] [I] [MemUsageChange] Init cuDNN: CPU +0, GPU +34, now: CPU 3129, GPU 1026 (MiB)
+[04/02/2025-13:41:23] [TRT] [I] Local timing cache in use. Profiling results in this builder pass will not be stored.
+[04/02/2025-13:42:14] [TRT] [I] Some tactics do not have sufficient workspace memory to run. Increasing workspace size will enable more tactics, please check verbose output for requested sizes.
+[04/02/2025-13:43:06] [TRT] [I] Total Activation Memory: 5149356544
+[04/02/2025-13:43:06] [TRT] [I] Detected 1 inputs and 1 output network tensors.
+[04/02/2025-13:43:06] [TRT] [I] Total Host Persistent Memory: 276784
+[04/02/2025-13:43:06] [TRT] [I] Total Device Persistent Memory: 0
+[04/02/2025-13:43:06] [TRT] [I] Total Scratch Memory: 16777216
+[04/02/2025-13:43:06] [TRT] [I] [MemUsageStats] Peak memory usage of TRT CPU/GPU memory allocators: CPU 5 MiB, GPU 3280 MiB
+[04/02/2025-13:43:06] [TRT] [I] [BlockAssignment] Started assigning block shifts. This will take 242 steps to complete.
+[04/02/2025-13:43:06] [TRT] [I] [BlockAssignment] Algorithm ShiftNTopDown took 15.2659ms to assign 10 blocks to 242 nodes requiring 119013888 bytes.
+[04/02/2025-13:43:06] [TRT] [I] Total Activation Memory: 119013888
+[04/02/2025-13:43:07] [TRT] [I] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +32, now: CPU 3388, GPU 1106 (MiB)
+[04/02/2025-13:43:07] [TRT] [I] [MemUsageChange] Init cuDNN: CPU +0, GPU +34, now: CPU 3388, GPU 1140 (MiB)
+[04/02/2025-13:43:07] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in building engine: CPU +1, GPU +37, now: CPU 1, GPU 37 (MiB)
+TensorRT: export success ✅ 122.1s, saved as 'runs/detect/train144/weights/best.engine' (38.0 MB)
+
+Export complete (126.3s)
+Results saved to /root/lsj/yolo11/runs/detect/train144/weights
+Predict:         yolo predict task=detect model=runs/detect/train144/weights/best.engine imgsz=1024  
+Validate:        yolo val task=detect model=runs/detect/train144/weights/best.engine imgsz=1024 data=/root/lsj/yolo11/run_det_slice.yaml  
+Visualize:       https://netron.app
+runs/detect/train144/weights/best.engine

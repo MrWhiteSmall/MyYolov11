@@ -1,0 +1,24 @@
+# /root/datasets/mvYOLO-Det-TP-Aug
+path: /root/datasets/mvTP-SIMO-Light-slice # dataset root dir (absolute or relative; if relative, it's relative to default datasets_dir)
+train: images/train # train images (relative to 'path') 4 images
+val: images/val # val images (relative to 'path') 4 images
+test:  images/val # test images (optional)
+
+# Classes (80 COCO classes)
+names:
+    0: 0
+    1: 1
+    2: 2
+    3: 3
+    4: 4
+    5: 5
+    6: 6
+    7: 7
+    8: 8
+    9: 9
+    10: 10
+    11: 11
+    12: 12
+    13: 13
+    14: 14
+    15: 15
