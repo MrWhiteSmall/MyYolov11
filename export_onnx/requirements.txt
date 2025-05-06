@@ -65,7 +65,7 @@ onnxruntime-gpu==1.17.1
 onnxsim==0.4.36
 onnxslim @ file:///root/github_for_install/onnxslim-0.1.34-py3-none-any.whl#sha256=755cb13cfd7a0b47d33e5c1935db2bb7a6993e9098a33987c28794f9187cab17
 opencv-python==4.11.0.86
-packaging==24.1
+packaging==25.0
 pandas==2.2.2
 parso==0.8.4
 pexpect==4.9.0
