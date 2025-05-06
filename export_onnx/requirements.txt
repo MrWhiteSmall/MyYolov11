@@ -37,7 +37,7 @@ kiwisolver==1.4.7
 lap==0.4.0
 lazy_loader==0.4
 lit==18.1.8
-Markdown==3.7
+Markdown==3.8
 markdown-it-py==3.0.0
 MarkupSafe==2.1.5
 matplotlib==3.7.4
