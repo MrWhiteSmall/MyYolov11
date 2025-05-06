@@ -1,6 +1,6 @@
 absl-py==2.1.0
 asttokens==2.4.1
-cachetools==5.5.0
+cachetools==5.5.2
 certifi==2024.8.30
 charset-normalizer==3.3.2
 click==8.1.7
